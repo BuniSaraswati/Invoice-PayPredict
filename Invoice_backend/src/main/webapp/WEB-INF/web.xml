@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Project_HRC</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+<servlet>
+<description/>
+<display-name>DataDeletion</display-name>
+<servlet-name>DataDeletion</servlet-name>
+<servlet-class>com.crud.DataDeletiont</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>DataDeletion</servlet-name>
+<url-pattern>/DataDeletion</url-pattern>
+</servlet-mapping>
+<servlet>
+<description/>
+<display-name>DataFetching</display-name>
+<servlet-name>DataFetching</servlet-name>
+<servlet-class>com.crud.DataFetching</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>DataFetching</servlet-name>
+<url-pattern>/DataFetching</url-pattern>
+</servlet-mapping>
+<servlet>
+<description/>
+<display-name>DataInsertion</display-name>
+<servlet-name>DataInsertion</servlet-name>
+<servlet-class>com.crud.DataInsertion</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>DataInsertion</servlet-name>
+<url-pattern>/DataInsertion</url-pattern>
+</servlet-mapping>
+<servlet>
+<description/>
+<display-name>UpdateData</display-name>
+<servlet-name>UpdateData</servlet-name>
+<servlet-class>com.crud.UpdateData</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>UpdateData</servlet-name>
+<url-pattern>/UpdateData</url-pattern>
+</servlet-mapping>
+<filter>
+<filter-name>CorsFilter</filter-name>
+<filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+<init-param>
+<param-name>cors.allowed.origins</param-name>
+<param-value>*</param-value>
+</init-param>
+<init-param>
+<param-name>cors.allowed.methods</param-name>
+<param-value>GET,POST,HEAD,OPTIONS,PUT,DELETE</param-value>
+</init-param>
+<init-param>
+<param-name>cors.allowed.headers</param-name>
+<param-value>Content-Type,X-Requested-With,accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers</param-value>
+</init-param>
+<init-param>
+<param-name>cors.exposed.headers</param-name>
+<param-value>Access-Control-Allow-Origin,Access-Control-Allow-Credentials</param-value>
+</init-param>
+<init-param>
+<param-name>cors.support.credentials</param-name>
+<param-value>false</param-value>
+</init-param>
+<init-param>
+<param-name>cors.preflight.maxage</param-name>
+<param-value>10</param-value>
+</init-param>
+</filter>
+<filter-mapping>
+<filter-name>CorsFilter</filter-name>
+<url-pattern>/*</url-pattern>
+</filter-mapping>
+</web-app>
