@@ -1,0 +1,36 @@
+.app {
+    min-height: 100vh;
+    background-color: #2d4250;
+    color : 'white'
+  }
+  
+  .btnGrp1,
+  .btnGrp2,
+  .inputNrefresh{
+    display: flex;
+  }
+  .btnGrp1{
+    flex: .55;
+    justify-content: center;
+    align-items: center;
+  }
+  .btnGrp2{
+    flex: .45;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  
+  .inputNrefresh{
+    flex: .3;
+    justify-content: space-between;
+  }
+  .btnGrp2  >*{
+    flex: auto;
+  }
+  .head:hover{
+    color: #fff !important;
+  }
+  .head:active{
+    color: white !important;
+  }
